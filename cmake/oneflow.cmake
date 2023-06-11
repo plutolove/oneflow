@@ -319,7 +319,7 @@ elseif(UNIX)
     ${EXTERNAL_TARGETS}
     -Wl,--no-whole-archive
     -ldl
-    -lrt)
+    -lrt -ltinfo -lXNVCtrl -ludev -lOpenCL)
   if(BUILD_CUDA)
     target_link_libraries(oneflow CUDA::cudart_static)
   endif()
